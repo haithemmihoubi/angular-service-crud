@@ -18,8 +18,13 @@ headers= new HttpHeaders().set('Content-Type','application/json');
 
 list():Observable<any> {
 return this.http.get(this.apiUrl);
+console.log(this.http.get(this.apiUrl)) ;
 }
+// get a signle item
+getItem(id:any):Observable<any> {
+ return this.http.get(`${this.apiUrl}/${id}`);
 
+}
 
 
 
